@@ -25,7 +25,7 @@ def home_page():
 
 
     # ----- Profile image file -----
-    profile_image_file_path = "profile.png"       # TODO: Upload your profile image to the same folder as this script and update this if it has a different name
+    profile_image_file_path = "profile.JPG"       # TODO: Upload your profile image to the same folder as this script and update this if it has a different name
 
     with open(profile_image_file_path, "rb") as img_file:
         img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
@@ -76,5 +76,6 @@ pg = st.navigation([
     st.Page("pages/01_image_cropper.py", title="Image Cropper", icon="🖼️"),
     st.Page("pages/02_netflix_data_analysis.py", title="Netflix Data Analysis", icon="🎬"),
     st.Page("pages/03_temperatures_dashboard.py", title="Temperatures Dashboard", icon="🌦️"),
+    st.Page("pages/04_main.py", title="ISO Policy Checker", icon="✅"),
 ])
 pg.run()
