@@ -115,7 +115,8 @@ if movies_avg_duration_per_year is not None:
     plt.xlabel("Year")
     plt.ylabel("Average Duration (minutes)")
     plt.title("Average Duration of Movies Across Years")
-
+    
+    st.pyplot(fig)
 
 else:
     st.subheader("⚠️ You still need to develop the Ex 2.7.")
