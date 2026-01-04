@@ -24,10 +24,10 @@ st.divider()
 def load_data():
     data_path = "data/cities_temperatures.csv"
 
-    temps_df = pd.read_csv(data_path)  # Load the dataset
+    temps_df = pd.read_csv(data_path, sep=';')  # Load the dataset with semicolon separator
 
     if temps_df is not None:
-        temps_df["Date"] = pd.to_datetime(temps_df["Date"]).dt.date
+        temps_df["Date"] = pd.to_datetime(temps_df["Date"], dayfirst=True).dt.date
 
     return temps_df  # a Pandas DataFrame
 
